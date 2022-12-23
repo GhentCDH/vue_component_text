@@ -4,13 +4,13 @@ on:
   push:
     paths:
       - "docs/**"
-      - ".github/workflows/docs.yml"
+      - ".github/workflows/documentation.yml"
     branches:
       - main
   pull_request:
     paths:
       - "docs/**"
-      - ".github/workflows/docs.yml"
+      - ".github/workflows/documentation.yml"
     branches:
       - main
 
