@@ -53,13 +53,3 @@ jobs:
         uses: ./.github/actions/setup
       - name: Test (Vue 3)
         run: yarn test:vue3
-  test_coverage:
-    name: Test (Coverage)
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Setup
-        uses: ./.github/actions/setup
-      - name: Test coverage
-        run: yarn test:coverage
