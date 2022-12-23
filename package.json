@@ -7,6 +7,7 @@
     "preview": "vite preview",
     "docs:dev": "vue-demi-switch 3 && vitepress dev docs",
     "docs:build": "vue-demi-switch 3 && vitepress build docs",
+    "docs:github": "vue-demi-switch 3 && BASE='/vue_component_text/' vitepress build docs",
     "docs:preview": "vue-demi-switch 3 && vitepress preview docs",
     "test:vue2": "vue-demi-switch 2 && vitest --environment jsdom --root src/",
     "test:vue3": "vue-demi-switch 3 && vitest --environment jsdom --root src/",

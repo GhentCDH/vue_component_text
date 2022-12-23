@@ -27,5 +27,6 @@ coverage
 *.sln
 *.sw?
 
-/docs/.vitepress
+/docs/.vitepress/*
+!/docs/.vitepress/config.ts
 /test_coverage
