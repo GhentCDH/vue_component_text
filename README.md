@@ -6,4 +6,4 @@
 A component to display texts with line numbering for Vue 2 and Vue 3.
 
 * [Documentation](https://ghentcdh.github.io/vue_component_text/)
-* [Contributing Guide](CONTRIBUTING)
+* [Contributing Guide](CONTRIBUTING.md)
