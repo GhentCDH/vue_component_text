@@ -8,17 +8,10 @@ on:
       - "package.json"
     branches:
       - main
-  pull_request:
-    paths:
-      - "docs/**"
-      - ".github/workflows/documentation.yml"
-      - "package.json"
-    branches:
-      - main
 
 jobs:
-  documentation:
-    name: Documentation
+  build:
+    name: Build documentation
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -32,3 +25,18 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: docs/.vitepress/dist
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./dist
+  deploy:
+    name: Deploy documentation
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
