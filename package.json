@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs",
+    "docs:dev": "vue-demi-switch 3 && vitepress dev docs",
+    "docs:build": "vue-demi-switch 3 && vitepress build docs",
+    "docs:preview": "vue-demi-switch 3 && vitepress preview docs",
     "test:vue2": "vue-demi-switch 2 && vitest --environment jsdom --root src/",
     "test:vue3": "vue-demi-switch 3 && vitest --environment jsdom --root src/",
     "test:coverage": "vue-demi-switch 3 && vitest --environment jsdom --root src/ --coverage",
