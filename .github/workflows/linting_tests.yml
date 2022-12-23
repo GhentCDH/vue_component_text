@@ -62,4 +62,4 @@ jobs:
       - name: Setup
         uses: ./.github/actions/setup
       - name: Test coverage
-        run: yarn test:vue3
+        run: yarn test:coverage
