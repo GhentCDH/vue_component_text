@@ -62,3 +62,10 @@ yarn lint
 ```sh
 yarn type-check
 ```
+
+### Build and preview documentation with [VitePress](https://vitepress.vuejs.org/)
+
+```sh
+yarn docs:build
+yarn docs:preview
+```
