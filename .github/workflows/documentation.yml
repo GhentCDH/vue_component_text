@@ -1,0 +1,32 @@
+name: Documentation
+
+on:
+  push:
+    paths:
+      - "docs/**"
+      - ".github/workflows/docs.yml"
+    branches:
+      - main
+  pull_request:
+    paths:
+      - "docs/**"
+      - ".github/workflows/docs.yml"
+    branches:
+      - main
+
+jobs:
+  documentation:
+    name: Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup
+        uses: ./.github/actions/setup
+      - name: Build documentation
+        run: yarn docs:build
+      - name: Deploy to Github pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/.vitepress/dist
