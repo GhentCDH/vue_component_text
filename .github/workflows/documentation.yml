@@ -5,12 +5,14 @@ on:
     paths:
       - "docs/**"
       - ".github/workflows/documentation.yml"
+      - "package.json"
     branches:
       - main
   pull_request:
     paths:
       - "docs/**"
       - ".github/workflows/documentation.yml"
+      - "package.json"
     branches:
       - main
 
