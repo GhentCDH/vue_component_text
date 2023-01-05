@@ -63,9 +63,8 @@ yarn lint
 yarn type-check
 ```
 
-### Build and preview documentation with [VitePress](https://vitepress.vuejs.org/)
+### Compile and Hot-Reload documentation with [VitePress](https://vitepress.vuejs.org/)
 
 ```sh
-yarn docs:build
-yarn docs:preview
+yarn docs:dev
 ```
