@@ -4,7 +4,13 @@ We're really excited that you are interested in contributing. Please take a mome
 
 ## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+* [VSCode](https://code.visualstudio.com/)
+* [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur)
+* [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
+* [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+* [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+* [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+* [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
 
 ### Type Support for `.vue` Imports in TS
 
