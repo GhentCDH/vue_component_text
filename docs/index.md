@@ -3,9 +3,8 @@
 <!-- markdownlint-disable MD033 -->
 <script setup>
 import { VueLive } from "vue-live";
-import ".vitepress/theme";
 import { TextBlock } from "../src/components";
-import "../src/style.scss";
+import "./style.scss";
 
 const example1 = `<TextBlock
     :lines="[
