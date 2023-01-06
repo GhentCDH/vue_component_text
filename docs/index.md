@@ -2,7 +2,7 @@
 
 <!-- markdownlint-disable MD033 -->
 <script setup>
-import TextBlock from "../src/components/TextBlock.vue";
+import { TextBlock } from "../src/components";
 import "../src/style.scss";
 </script>
 

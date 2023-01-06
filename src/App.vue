@@ -8,5 +8,5 @@
 </template>
 
 <script setup lang="ts">
-import TextBlock from "./components/TextBlock.vue";
+import { TextBlock } from "./components";
 </script>
