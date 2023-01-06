@@ -1,7 +1,22 @@
 {
-  "name": "vue_component_text",
+  "name": "@ghentcdh/vue-component-text",
+  "license": "MIT",
+  "repository": "https://github.com/GhentCDH/vue_component_text",
   "version": "0.0.1",
-  "private": true,
+  "exports": {
+    ".": {
+      "import": "./dist/vue-component-text.es.js",
+      "require": "./dist/vue-component-text.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./style.css": {
+      "import": "./dist/style.css"
+    }
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
@@ -12,7 +27,7 @@
     "test:vue2": "vue-demi-switch 2 && vitest --environment jsdom --root src/",
     "test:vue3": "vue-demi-switch 3 && vitest --environment jsdom --root src/",
     "test:coverage": "vue-demi-switch 3 && vitest --environment jsdom --root src/ --coverage",
-    "build-only": "vite build",
+    "build": "vite build && vue-tsc --declaration --emitDeclarationOnly -p tsconfig.lib.json",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
