@@ -16,6 +16,7 @@ jobs:
         with:
           node-version: "18"
           registry-url: https://registry.npmjs.org/
+          scope: "@ghentcdh"
       - name: Load cache
         uses: actions/cache@v3
         id: yarn-cache
@@ -28,6 +29,6 @@ jobs:
       - name: Build
         run: yarn build
       - name: Publish package on NPM
-        uses: yarn publish --access public
+        run: yarn npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
