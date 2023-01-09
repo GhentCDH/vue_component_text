@@ -1,7 +1,10 @@
 {
   "name": "@ghentcdh/vue-component-text",
   "license": "MIT",
-  "repository": "https://github.com/GhentCDH/vue_component_text",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GhentCDH/vue_component_text"
+  },
   "version": "0.0.1",
   "exports": {
     ".": {
@@ -15,7 +18,7 @@
   },
   "type": "module",
   "files": [
-    "dist"
+    "dist/**/*"
   ],
   "scripts": {
     "dev": "vite",
