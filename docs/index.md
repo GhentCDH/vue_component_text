@@ -3,10 +3,10 @@
 <!-- markdownlint-disable MD033 -->
 <script setup>
 import { VueLive } from "vue-live";
-import { TextBlock } from "../src/components";
+import { Paragraph } from "../src/components";
 import "./style.scss";
 
-const example1 = `<TextBlock
+const example1 = `<Paragraph
     :lines="[
       { number: 1, content: 'Line 1' },
       { number: 2, content: 'Line 2' },
@@ -20,7 +20,7 @@ const example1 = `<TextBlock
 
 <VueLive
   :code="example1"
-  :components="{ TextBlock }"
+  :components="{ Paragraph }"
 />
 
 ## Reference

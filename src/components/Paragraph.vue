@@ -1,5 +1,5 @@
 <template>
-  <div class="text-block">
+  <div class="paragraph">
     <div
       v-for="{ number, content } in lines"
       :key="number"
