@@ -3,12 +3,12 @@
   <div :class="`${paragraphStyle}-paragraph`">
     <component
       :is="lineWrapperComponentType"
-      v-for="{ number, content } in lines"
-      :key="number"
+      v-for="{ id, content } in lines"
+      :key="id"
       class="line-wrapper"
     >
       <component :is="lineNumberComponentType" class="line-number">{{
-        number
+        id
       }}</component>
       <component :is="lineContentComponentType" class="line-content">{{
         content
@@ -22,7 +22,7 @@ import { computed } from "vue";
 const props = withDefaults(
   defineProps<{
     paragraphStyle?: "in-line" | "new-line";
-    lines: { number: number; content: string }[];
+    lines: { id: string; content: string }[];
   }>(),
   {
     paragraphStyle: "new-line",

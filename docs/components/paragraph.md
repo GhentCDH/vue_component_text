@@ -8,15 +8,15 @@ import "../style.scss";
 
 const newLineExample = `<Paragraph
     :lines="[
-      { number: 1, content: 'Line 1' },
-      { number: 2, content: 'Line 2' },
+      { id: '1', content: 'Line 1' },
+      { id: '2', content: 'Line 2' },
     ]"
 />`
 const inLineExample = `<Paragraph
     paragraph-style="in-line"
     :lines="[
-      { number: 1, content: 'Line 1' },
-      { number: 2, content: 'Line 2' },
+      { id: '1', content: 'Line 1' },
+      { id: '2', content: 'Line 2' },
     ]"
 />`
 </script>
@@ -43,7 +43,7 @@ const inLineExample = `<Paragraph
 
 ### Properties
 
-| Property        | Type                                  | Default      | Description                                                                                                      |
-| --------------- | ------------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------- |
-| paragraph-style | "in-line" \| "new-line"               | "new-line"   | How to display the lines of text: one after another (`in-line`) or each line on a new line (`new-line`)          |
-| lines           | { number: number; content: string }[] | / (required) | An array with objects containing the number of the line (key `number`) and the text of the line (key `content`). |
+| Property        | Type                              | Default      | Description                                                                                              |
+| --------------- | --------------------------------- | ------------ | -------------------------------------------------------------------------------------------------------- |
+| paragraph-style | "in-line" \| "new-line"           | "new-line"   | How to display the lines of text: one after another (`in-line`) or each line on a new line (`new-line`)  |
+| lines           | { id: string; content: string }[] | / (required) | An array with objects containing the id of the line (key `id`) and the text of the line (key `content`). |

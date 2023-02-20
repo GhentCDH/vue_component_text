@@ -8,8 +8,8 @@ describe("Default paragraph (newline)", () => {
     return mount(Paragraph, {
       props: {
         lines: [
-          { number: 1, content: "Line 1" },
-          { number: 2, content: "Line 2" },
+          { id: "1", content: "Line 1" },
+          { id: "2", content: "Line 2" },
         ],
       },
     });
@@ -49,8 +49,8 @@ describe("Inline paragraph", () => {
       props: {
         paragraphStyle: "in-line",
         lines: [
-          { number: 1, content: "Line 1" },
-          { number: 2, content: "Line 2" },
+          { id: "1", content: "Line 1" },
+          { id: "2", content: "Line 2" },
         ],
       },
     });
