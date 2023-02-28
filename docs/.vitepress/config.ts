@@ -19,6 +19,10 @@ export default defineConfig({
           text: "Paragraph",
           link: "/components/paragraph.md",
         },
+        {
+          text: "Text",
+          link: "/components/text.md",
+        },
       ],
     },
     editLink: {
