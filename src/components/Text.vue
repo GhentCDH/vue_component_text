@@ -15,27 +15,13 @@
 </template>
 <script setup lang="ts">
 import { Paragraph } from "../components";
-import type {
-  ParagraphHeaderComponentType,
-  ParagraphStyle,
-  ParagraphProps,
-} from "../types";
+import type { TextProps } from "@/types";
 
-// TODO: interface reuse
-// https://github.com/vuejs/core/issues/4294
-const props = withDefaults(
-  defineProps<{
-    displayHeaders?: boolean;
-    headerComponentType?: ParagraphHeaderComponentType;
-    paragraphStyle?: ParagraphStyle;
-    paragraphs: ParagraphProps[];
-  }>(),
-  {
-    displayHeaders: true,
-    headerComponentType: "h3",
-    paragraphStyle: "new-line",
-  }
-);
+const props = withDefaults(defineProps<TextProps>(), {
+  displayHeaders: true,
+  headerComponentType: "h3",
+  paragraphStyle: "new-line",
+});
 const paragraphNumber = function (
   index: number,
   header?: string,

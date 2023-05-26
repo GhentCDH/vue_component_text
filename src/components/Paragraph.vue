@@ -29,30 +29,14 @@
 <script setup lang="ts">
 import { computed } from "vue";
 
-import type {
-  Line,
-  ParagraphStyle,
-  ParagraphHeaderComponentType,
-} from "../types";
+import type { ParagraphProps } from "@/types";
 
-// TODO: interface reuse
-// https://github.com/vuejs/core/issues/4294
-const props = withDefaults(
-  defineProps<{
-    id: string;
-    headerComponentType?: ParagraphHeaderComponentType;
-    header?: string;
-    number?: number;
-    paragraphStyle?: ParagraphStyle;
-    lines: Line[];
-  }>(),
-  {
-    headerComponentType: "h3",
-    header: undefined,
-    number: undefined,
-    paragraphStyle: "new-line",
-  }
-);
+const props = withDefaults(defineProps<ParagraphProps>(), {
+  headerComponentType: "h3",
+  header: undefined,
+  number: undefined,
+  paragraphStyle: "new-line",
+});
 const lineWrapperComponentType = computed(() => {
   return props.paragraphStyle === "new-line" ? "div" : "span";
 });
